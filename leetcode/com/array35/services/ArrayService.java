@@ -20,7 +20,9 @@ public final class ArrayService {
 
         while (left <= right) {
            final int middle = left + (right - left) / 2;
-           if (data[middle] < value) {
+           if (data[middle] == value) {
+               return middle;
+           } else if (data[middle] < value) {
                left = middle + 1;
            } else {
                right = middle - 1;
